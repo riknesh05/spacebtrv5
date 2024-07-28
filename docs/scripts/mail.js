@@ -2,6 +2,7 @@
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById('msg');
   const msgt = document.getElementById('msgt');
+  const popcls = document.getElementById('pop_up');
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -23,3 +24,6 @@ form.addEventListener('submit', e => {
                         msgt.innerHTML = ""
                 },4000)
             }}
+            function clspopup(){
+              popcls.style.display = "none";
+           }

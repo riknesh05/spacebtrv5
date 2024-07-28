@@ -226,63 +226,6 @@ body {
   border-radius: 43% 57% 46% 54% / 78% 56% 44% 22%;
 }
 
-/* TODO ---------------media query------------------------ */
-@media only screen and (min-width: 600px) {
-  /* ! For tablets: */
-}
-@media only screen and (min-width: 768px) {
-  /* ? For desktop: */
-  /* body .header{} */
-  .header .title {
-    /* letter-spacing: 2.5px; */
-    font-size: 130px;
-    -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      both;
-    animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  .header .subtitle {
-    line-height: 0px;
-    font-size: 15px;
-    -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-      both;
-    animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  .mail-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    align-items: center;
-  }
-
-  .mail-container img {
-    grid-row: span 2 / span 2;
-  }
-
-  .mail-container .inputs {
-    grid-row: span 2 / span 2;
-  }
-  .prompt {
-    display: none;
-  }
-  .inputs .prompt-grid {
-    display: grid;
-    font-size: 20px;
-  }
-  .section .buttons button{
-    width: 250px;
-   
-  }
-
-  .contents .content .img img{
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-     }
-     .section .buttons .connect{
-      display:block;
-    }
-}
-/* TODO -------------------media query----------------------------*/
 
 .background {
   /* z-index: -1; */
@@ -330,11 +273,15 @@ body {
 }
 .popup{
   position: absolute;
-  z-index: 3;
+  z-index: 5;
+  top: 25vh;
+  left: 20vw;
+  right: 20vw;
+  display: none;
 }
 
 .mail-container {
-  background-color: var(--bg-sub);
+  background-color: var(--bg-main);
   width: 60vw;
   padding: 10px;
   color: var(--name-color);
@@ -377,7 +324,7 @@ legend {
   border: none;
   margin: auto;
 }
-form button:hover {
+form .send_button:hover {
   color: white;
   cursor: pointer;
   scale: 1.1;
@@ -390,15 +337,25 @@ form button:hover {
     #ff05de
   );
 }
-form button :hover  svg {
+.form_btns{
+  display: flex;
+}
+form .send_button :hover  svg {
   scale: 1.1;
   font-weight: 700;
 }
-form button :hover p {
+form .send_button :hover p {
   scale: 1.1;
   font-weight: 900;
 }
 
+form #close_popup:hover{
+ background-color:red ;
+ fill: white;
+ scale: 1.1;
+ font-weight: 900;
+ color: white;
+}
 .prompt-grid {
   display: none;
 }
@@ -499,14 +456,15 @@ body .buttons button:hover{
   margin: 5px 2px 1px 2px;
   color: white;
   transition: 0.4s;
-
-
+}
+.fa-brands{
+  color: var(--name-color);
 }
 .fa-youtube:hover{
  color:red ;
 }
 .fa-instagram:hover{
- color: linear-gradient();
+ color:#40dbe6;
 }
 .fa-linkedin:hover{
   color: rgb(25, 125, 255);
@@ -553,11 +511,136 @@ body .buttons button:hover{
   border: 1px solid white;
   align-content: center;
 }
-.contents .content .img2{
-  display: none;
-}
+
 .contents .brief p{
  padding: 5px;
  margin-top: 10px;
  line-height: 25px;
 }
+
+.footer{
+  background-color: var(--bg-main);
+  width: 99vw;
+  height: 20vh;
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  right: 10px;
+  z-index: 3;
+  padding: 10px;
+  border: 1px solid white;
+  margin-left:1px ;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  font-family: monospace;
+  color: var(--name-color);
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+}
+.ft-title{
+  font-size: 35px;
+}
+.ft-mine{
+  margin-top: 2px;
+ font-size: 25px;
+}
+.time{
+  margin-top: 2px;
+}
+.infos{
+
+}
+.ft-img{
+  display: flex;
+}
+.ft-img img{
+  width: 100px;
+  border-radius: 50%;
+}
+.btns{
+  margin-top: 2px;
+}
+.btn1{
+ 
+}
+.btn2{
+
+}
+.ph-connect .connect button{
+  width: 40vw;
+  background-color: var(--bg-sub);
+  border: 2px solid white;
+  margin-left: 5px;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+.ph-connect .connect p{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--name-color);
+  margin-left: 5px;
+  font-family: monospace;
+
+}
+  /* TODO ---------------media query------------------------ */
+  @media only screen and (min-width: 600px) {
+    /* ! For tablets: */
+  }
+  @media only screen and (min-width: 768px) {
+    /* ? For desktop: */
+    /* body .header{} */
+    .header .title {
+      /* letter-spacing: 2.5px; */
+      font-size: 130px;
+      -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    .header .subtitle {
+      line-height: 0px;
+      font-size: 15px;
+      -webkit-animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    .mail-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      align-items: center;
+    }
+  
+    .mail-container img {
+      grid-row: span 2 / span 2;
+    }
+  
+    .mail-container .inputs {
+      grid-row: span 2 / span 2;
+    }
+    .prompt {
+      display: none;
+    }
+    .inputs .prompt-grid {
+      display: grid;
+      font-size: 20px;
+    }
+    .section .buttons button{
+      width: 250px;
+     
+    }
+  
+    .contents .content .img img{
+      width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+       }
+       .section .buttons .connect{
+        display: block;
+      }
+      .contents .ph-connect{
+        display: none;
+      }
+  }
+  /* TODO -------------------media query----------------------------*/

@@ -1,4 +1,5 @@
 // ! jQuery to insert other html pages
+const popopen = document.getElementById('pop_up');
 $(function() {
     $("#About").load("htmls/members.html");
  });
@@ -6,6 +7,7 @@ $(function() {
 $(function() {
     $("#Explore").load("htmls/explore.html");
  });
-$(function() {
-    $("#pop_up").load("htmls/popup.html");
- });
+
+ function open_popup(){
+  popopen.style.display = "block";
+ }
