@@ -416,7 +416,7 @@ body .buttons button:hover{
 
 .drop_container {
   row-gap: 1rem;
-  padding: 2rem;
+  padding: 5px;
   font-family: monospace;
 }
 
@@ -427,7 +427,7 @@ body .buttons button:hover{
 }
 
 .drop_card {
-  width: 360px;
+  width: 100%;
   justify-content: space-between;
   padding: 0.75rem 1.25rem.75rem 0.75rem;
   background-color: var(--bg-sub);
@@ -445,7 +445,7 @@ body .buttons button:hover{
 }
 
 .drop_name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -555,7 +555,7 @@ body .buttons button:hover{
   display: flex;
 }
 .ft-img img{
-  width: 100px;
+  width: 70px;
   border-radius: 50%;
 }
 .btns{
@@ -584,9 +584,189 @@ body .buttons button:hover{
   font-family: monospace;
 
 }
+
+.about-continer {
+width: 95vw;
+background-color: rgb(4, 13, 33);
+/* height: 70vh; */
+border: 1px solid white;
+border-radius: 25px;
+color: white;
+font-family: monospace;
+position: absolute;
+top: 10px;
+left: 10px;
+z-index: 5;
+
+display: none;
+}
+.abt-header{
+  background-color: var(--bg-main);
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin-top: 5px;
+border-radius: 25px;
+padding: 10px;
+position: relative;
+}
+.abt-header img{
+  width: 100px;
+  border-radius: 50%;
+}
+.abt-header h1{
+  font-size: 45px;
+}
+.about {
+  overflow-y: scroll;
+  letter-spacing: 1.5px;
+  /* margin: auto; */
+  /* height: 150px; */
+}
+.abt-header svg{
+  fill: white;
+}
+.members {
+}
+.abtclsbtn{
+  position: absolute;
+  margin: 2px;
+  top: 0;
+  right: 2px;
+}
+
+.explore-continer {
+  width: 95vw;
+background-color: rgb(4, 13, 33);
+height: 70vh;
+border: 1px solid white;
+border-radius: 25px;
+color: white;
+font-family: monospace;
+position: absolute;
+top: 10px;
+left: 10px;
+z-index: 5;
+overflow-y: scroll;
+display: none;
+}
+.explore-header {
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+  /* border-radius: 25px; */
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+.planets-container {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ gap: 2px;
+}
+.planets-itms{
+  border: 1px solid white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  /* display: flex; */
+  justify-content: space-between;
+}
+.planets-des{
+  grid-column-start: 2;
+  margin-top: 5px;
+}
+p strong{
+ text-decoration: underline;
+ font-size: 10px;
+}
+.morebtn{
+
+}
+/* !planets */
+/* !planets */
+
+@keyframes planets_rotation {
+  100% {
+    background-position: 200%;
+  }
+}
+
+.planets {
+  border-radius: 50%;
+  grid-row: span 2 / span 2;
+  box-shadow: 0px 2px 10px 5px rgb(0, 0, 0);
+}
+
+.mercury {
+  background-image: url("assets/planets/1mercury.jpg");
+  animation: planets_rotation 110s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.venus {
+  background-image: url("assets/planets/2venus.jpg");
+  animation: planets_rotation 50s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.earth {
+  background-image: url("assets/planets/3earth.jpg");
+  animation: planets_rotation 50s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.mars {
+  background-image: url("assets/planets/4mars.jpg");
+  animation: planets_rotation 100s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.jupiter {
+  background-image: url("assets/planets/5jupiter.jpg");
+  animation: planets_rotation 60s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.saturn {
+  background-image: url("assets/planets/6saturn.jpg");
+  animation: planets_rotation 40s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.uranus {
+  background-image: url("assets/planets/7uranus.png");
+  animation: planets_rotation 30s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.neptune {
+  background-image: url("assets/planets/8neptune.png");
+  animation: planets_rotation 30s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+.pluto {
+  background-image: url("assets/planets/9pluto.png");
+  animation: planets_rotation 40s infinite;
+  width: 20vw;
+  height: 20vw;
+}
+
+/* !planets */
+/* !planets */
+
+
   /* TODO ---------------media query------------------------ */
   @media only screen and (min-width: 600px) {
     /* ! For tablets: */
+    /* .about-continer {
+      width: 50vw;
+
+      } */
   }
   @media only screen and (min-width: 768px) {
     /* ? For desktop: */
@@ -642,5 +822,20 @@ body .buttons button:hover{
       .contents .ph-connect{
         display: none;
       }
+      .about-continer {
+        width: 40vw;
+
+        }
+        .explore-continer{
+          width: 40vw;
+        }
+        .planets{
+          width: 10vw;
+          height: 10vw;
+        }
+        .ft-img img{
+          width: 100px;
+         
+        }
   }
   /* TODO -------------------media query----------------------------*/
