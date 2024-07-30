@@ -520,7 +520,7 @@ body .buttons button:hover{
 
 .footer{
   background-color: var(--bg-main);
-  width: 99vw;
+  width: 98vw;
   height: 20vh;
   position: absolute;
   bottom: 0px;
