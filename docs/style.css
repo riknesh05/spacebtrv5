@@ -673,12 +673,16 @@ display: none;
  grid-template-rows: repeat(2, 1fr);
  gap: 2px;
 }
+.planets-container a{
+  margin: 5px;
+}
 .planets-itms{
   border: 1px solid white;
   padding: 10px;
   margin: 5px;
   border-radius: 15px;
   /* display: flex; */
+  height: 100%;
   justify-content: space-between;
 }
 .planets-des{
