@@ -530,7 +530,7 @@ body .buttons button:hover{
   width: 98vw;
   height: 20vh;
   position: absolute;
-  bottom: 0px;
+  /* bottom: 0px; */
   left: 5px;
   right: 10px;
   z-index: 3;
