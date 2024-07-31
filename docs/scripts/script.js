@@ -2,13 +2,6 @@
 const popopen = document.getElementById('pop_up');
 const abt =document.getElementById('abt-container');
 const exp = document.getElementById('exp-container');
-$(function() {
-    $("#About").load("htmls/members.html");
- });
- 
-$(function() {
-    $("#Explore").load("htmls/explore.html");
- });
 
  function open_popup(){
   popopen.style.display = "block";

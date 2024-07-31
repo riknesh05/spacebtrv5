@@ -496,7 +496,7 @@ body .buttons button:hover{
 }
 .contents .content{
   width: 80vw;
-  height: 400px;
+  height: 100%;
   background-color: var(--bg-sub);
   color: var(--name-color);
   display: flex;
@@ -516,6 +516,7 @@ body .buttons button:hover{
   /* margin:0px auto; */
   border: 1px solid white;
   align-content: center;
+  margin: 5px;
 }
 
 .contents .brief p{
